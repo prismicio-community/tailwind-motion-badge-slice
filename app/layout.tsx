@@ -1,41 +1,5 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import "./globals.css";
-
-export const headingsFont = localFont({
-  src: [
-    {
-      path: "../assets/fonts/rationaldisplay-semibold-webfont.woff2",
-      weight: "600",
-      style: "normal",
-    },
-    {
-      path: "../assets/fonts/rationaldisplay-medium-webfont.woff2",
-      weight: "500",
-      style: "normal",
-    },
-  ],
-  variable: "--font-headings",
-  display: "swap",
-});
-
-export const copyFont = localFont({
-  src: [
-    {
-      path: "../assets/fonts/Satoshi-Variable.woff2",
-      style: "normal",
-      weight: "125 950",
-    },
-  ],
-  variable: "--font-copy",
-  display: "swap",
-  declarations: [
-    {
-      prop: "font-stretch",
-      value: "75% 125%",
-    },
-  ],
-});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -49,11 +13,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${headingsFont.variable} ${copyFont.variable} antialiased`}
-      >
-        {children}
-      </body>
+      <body className="antialiased">{children}</body>
     </html>
   );
 }

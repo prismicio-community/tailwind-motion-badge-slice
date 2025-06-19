@@ -8,8 +8,6 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-copy: var(--font-copy);
-  --font-headings: var(--font-headings);
 }
 
 body {

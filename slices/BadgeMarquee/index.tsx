@@ -40,7 +40,7 @@ const BadgeMarquee: FC<BadgeMarqueeProps> = ({ slice }) => {
             field={slice.primary.heading}
             components={{
               heading2: ({ children }) => (
-                <h2 className="font-headings tracking-tight text-4xl lg:text-5xl font-bold">
+                <h2 className="tracking-tight text-4xl lg:text-5xl font-bold">
                   {children}
                 </h2>
               ),
@@ -50,7 +50,7 @@ const BadgeMarquee: FC<BadgeMarqueeProps> = ({ slice }) => {
             field={slice.primary.subheading}
             components={{
               paragraph: ({ children }) => (
-                <p className="mt-6 max-w-[24em] font-copy text-base sm:text-md lg:text-xl font-medium text-[#505050]">
+                <p className="mt-6 max-w-[24em] text-base sm:text-md lg:text-xl font-medium text-[#505050]">
                   {children}
                 </p>
               ),
@@ -65,10 +65,10 @@ const BadgeMarquee: FC<BadgeMarqueeProps> = ({ slice }) => {
                     key={index}
                     className="xl:col-span-1 flex items-center gap-6"
                   >
-                    <span className="font-headings tracking-tight text-5xl sm:text-6xl xl:text-7xl font-bold w-20 sm:w-28 h-20 sm:h-28 rounded-xl shrink-0 flex items-center justify-center bg-[#F5E6FF] text-[#8E44EC]">
+                    <span className="tracking-tight text-5xl sm:text-6xl xl:text-7xl font-bold w-20 sm:w-28 h-20 sm:h-28 rounded-xl shrink-0 flex items-center justify-center bg-[#F5E6FF] text-[#8E44EC]">
                       {number.number}
                     </span>
-                    <p className="font-copy text-[#505050] text-base lg:text-md 2xl:text-xl font-medium">
+                    <p className="text-[#505050] text-base lg:text-md 2xl:text-xl font-medium">
                       {number.text}
                     </p>
                   </div>
