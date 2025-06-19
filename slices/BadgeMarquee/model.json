@@ -1,0 +1,69 @@
+{
+  "id": "badge_marquee",
+  "type": "SharedSlice",
+  "name": "BadgeMarquee",
+  "description": "BadgeMarquee",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "description": "Standard layout with headline, description, two key stats, and a flexible grid for awards/badges.",
+      "version": "initial",
+      "imageUrl": "",
+      "docURL": "...",
+      "primary": {
+        "heading": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Title",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "heading2"
+          }
+        },
+        "subheading": {
+          "type": "StructuredText",
+          "config": {
+            "multi": "paragraph,strong,em,hyperlink",
+            "label": "Description"
+          }
+        },
+        "numbers": {
+          "type": "Group",
+          "config": {
+            "label": "Key Statistics",
+            "fields": {
+              "number": {
+                "type": "Text",
+                "config": {
+                  "label": "Stat Value"
+                }
+              },
+              "text": {
+                "type": "Text",
+                "config": {
+                  "label": "Stat Label"
+                }
+              }
+            }
+          }
+        },
+        "badges": {
+          "type": "Group",
+          "config": {
+            "label": "Badges",
+            "fields": {
+              "badge": {
+                "type": "Image",
+                "config": {
+                  "label": "Badge Image"
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

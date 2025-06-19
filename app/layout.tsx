@@ -1,15 +1,40 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+export const headingsFont = localFont({
+  src: [
+    {
+      path: "../assets/fonts/rationaldisplay-semibold-webfont.woff2",
+      weight: "600",
+      style: "normal",
+    },
+    {
+      path: "../assets/fonts/rationaldisplay-medium-webfont.woff2",
+      weight: "500",
+      style: "normal",
+    },
+  ],
+  variable: "--font-headings",
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+export const copyFont = localFont({
+  src: [
+    {
+      path: "../assets/fonts/Satoshi-Variable.woff2",
+      style: "normal",
+      weight: "125 950",
+    },
+  ],
+  variable: "--font-copy",
+  display: "swap",
+  declarations: [
+    {
+      prop: "font-stretch",
+      value: "75% 125%",
+    },
+  ],
 });
 
 export const metadata: Metadata = {
@@ -25,7 +50,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${headingsFont.variable} ${copyFont.variable} antialiased`}
       >
         {children}
       </body>
